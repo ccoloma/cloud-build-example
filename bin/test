@@ -1,0 +1,16 @@
+#!/usr/bin/env node
+var fs = require("fs");
+var obj = JSON.parse(fs.readFileSync("config.json", "utf8"));
+obj.products.forEach(product => {
+  console.log("Validating " + product.name + "...");
+  var path = "img/" + product.logo;
+  if (fs.existsSync(path)) {
+    console.log("Ey, you need to upload one logo (" + path + ")");
+    process.exit(1);
+  }
+  if (product.discountPercentage <= 0) {
+    console.log("Negative discounts? Really?");
+    process.exit(1);
+  }
+  console.log("OK");
+});

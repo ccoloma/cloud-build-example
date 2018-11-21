@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link href="/css/main.css" rel="stylesheet">
+    <title>Anime stuff sets</title>
+  </head>
+  <body class="content">
+    <h1>Anime stuff sets</h1>
+    <p>
+      Here you can buy special Anime stuff sets. Enjoy it!
+    </p>
+    <div class="products">
+      {{#products}}
+      <div class="box">
+          {{#isBlackFriday}}
+          <div class="ribbon"><span>-{{discountPercentage}}%</span></div>
+          {{/isBlackFriday}}
+          <img src="/img/{{image}}" class="product-image">
+          <div class="title">{{name}}</div>
+          <div class="price">
+            Price: {{price}}€
+          </div>
+        </div>
+      {{/products}}
+    </div>
+  </body>
+</html>
