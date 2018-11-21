@@ -8,9 +8,9 @@
     "node-sass": "^4.10.0"
   },
   "scripts": {
-    "build:css": "node-sass scss/main.scss build/css/main.css",
-    "build:html": "mustache config.json index.html > build/index.html",
-    "build:static": "cp -r img build",
+    "build:css": "node-sass scss/main.scss build/website/css/main.css",
+    "build:html": "mustache config.json index.html > build/website/index.html",
+    "build:static": "cp -r img build/website",
     "build": "npm run build:css && npm run build:html && npm run build:static",
     "deploy": "bin/deploy",
     "test": "bin/test"
