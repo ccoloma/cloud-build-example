@@ -13,7 +13,7 @@ else
 fi
 
 rm -r *
-cp -R ../_build/* .
+cp -R ../build/* .
 git add -A
 git commit -m "${1:-Update gh-pages}"
 git push
