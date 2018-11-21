@@ -11,18 +11,27 @@
       Here you can buy special Anime stuff sets. Enjoy it!
     </p>
     <div class="products">
-      {{#products}}
       <div class="box">
-          {{#isBlackFriday}}
-          <div class="ribbon"><span>-{{discountPercentage}}%</span></div>
-          {{/isBlackFriday}}
-          <img src="/img/{{image}}" class="product-image">
-          <div class="title">{{name}}</div>
+          <img src="/img/sao.jpg" class="product-image">
+          <div class="title">Sword Art Online</div>
           <div class="price">
-            Price: {{price}}€
+            Price: 24.99€
           </div>
         </div>
-      {{/products}}
+      <div class="box">
+          <img src="/img/tokyo-ghoul.jpg" class="product-image">
+          <div class="title">Tokyo Ghoul</div>
+          <div class="price">
+            Price: 20.5€
+          </div>
+        </div>
+      <div class="box">
+          <img src="/img/gto.jpg" class="product-image">
+          <div class="title">Great Teacher Onizuka</div>
+          <div class="price">
+            Price: 14€
+          </div>
+        </div>
     </div>
   </body>
 </html>
